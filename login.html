@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+	<title>Pregunta</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+	<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+	 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+</head>
+<body>
+ 
+ <div class=" container mt-5 ">
+ <div class="form-group">
+ 	 
+
+ 
+
+ </div>
+ 
+    
+	 <div class="modal" id="modal1">
+     <div class="modal-content">
+     	<div class="modal-header">
+     		<div class="modal-title ">
+     			<h4 class="text-lg-center text-danger text-center" >¿Te gustaria salir despues de cuarentena ?</h4>
+     		</div>
+     		 <a type="button" class="close btn btn-outline-danger"  id="bb" aria-label="Close">
+          <span aria-hidden="true">&times;</span></a>
+     	</div>
+     	<div class="modal-body  ">
+     		 <div class="container mt-4">
+  	 <input class="btn btn-outline-success" id="bsi" value="Si" type="button">  
+   <input type="button" name="" class="btn btn-outline-success" id="bno" value="No">  
+  </div> 
+     	</div>
+     	<div class="modal-footer text-center">
+     		<a class="btn btn-outline-danger btn-lg" data-toggle='modal'  href="#" id="bsalir"
+    	 >Salir</a>
+       </div>
+       <div class="modal-footer text-center">
+        <a class="btn btn-outline-danger btn-lg" data-toggle='modal'  href="#" id="bcon"
+      >Algo para convencerte ;)</a>
+      </div>
+     </div> 		
+ 	
+  
+  
+  <script type="text/javascript">
+  var boton=document.getElementById('bsi');
+    var boton1=document.getElementById('bno');
+  
+  boton1.addEventListener('mouseenter',f1);
+   function f1(){
+    boton1.value="Si";
+    boton.value="No";
+    }  
+  boton.addEventListener('mouseenter',f);
+ 
+  
+function f(){
+    boton1.value="No";
+    boton.value="Si";
+    } 
+
+    $(document).ready(function(){
+  $('#bsi').click(function(){
+    swal('Gracias',' Sabia que aceptarias de todas maneras jejejej :D Dime que quieres hacer ese dia ?');  
+     	 
+  });
+   $('#bno').click(function(){
+    swal('Gracias',' Sabia que aceptarias de todas maneras jejejej :D Dime que quieres hacer ese dia ?','success');  
+   });
+   $('#bsalir').click(function(){
+     swal('!Advertencia¡',' Antes que salgas  responde mi pregunta, jejeje :D','warning');
+   });
+     $('#bb').click(function(){
+     swal('!Advertencia¡',' Bebe Antes que salgas  responde mi pregunta, jejeje :D','warning');
+   });
+   $('#bcon').click(function(){
+     swal('!Advertencia¡',' De verdad tengo que convencerte? Rayos ','warning');
+   });
+   
+     $('#modal1').modal('show');
+    });
+  </script>
+ 
+</body>
+ 
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>   
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+ 
+<script type="text/javascript" src="js/Data.js"></script>
+<script type="text/javascript" src="dist/sweetalert-dev.js"></script>
+<script type="text/javascript" src="dist/sweetalert.min.js"></script>
+</html>
